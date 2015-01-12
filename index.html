@@ -1,437 +1,72 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>Namecoin Intro for Domainer Investors</title>
-<!-- metadata -->
-<meta name="generator" content="S5" />
-<meta name="author" content="Mike Ward" />
-<meta name="id" content="http://dns.dnschain.net/id/mikeward" />
-<!-- configuration parameters -->
-<meta name="defaultView" content="slideshow" />
-<meta name="controlVis" content="hidden" />
-<!-- style sheet links -->
-<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
-<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
-<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
-<!-- S5 JS -->
-<script src="ui/default/slides.js" type="text/javascript"></script>
-</head>
-<body>
-<div class="layout">
-	<div id="controls"><!-- DO NOT EDIT --></div>
-	<div id="currentSlide"><!-- DO NOT EDIT --></div>
-	<div id="header"></div>
-	<div id="footer">
-		<h1>Mike Ward - May 6, 2014</h1>
-		<h2>Namecoin - Next Generation DNS</h2>
-	</div>
-</div>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+		  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu">
+        <script src="js/modernizr-2.6.2.min.js"></script>
+		  <style type="text/css">
+		  html{
+		     background: url('img/purple_background.jpg') no-repeat 0 0 scroll;
+			  background-color:#ffffff;
+			  background-size: 100% 100%;
+			  font-family: ubuntu,arial,helvetica;
+			  height:100%;
+			  width:100%;
+			}
+			div#logo { width:100%; height:100%; position:relative; }
+			div#logo img { top:-100px; left:-100px; position:absolute; margin:30% 0 0 50%; }
+			div#clickhere { bottom:10%; position:absolute; width:100%; text-align:center; }
+			div#clickhere a { color:white; text-decoration:none; }
+			div#clickme { width:100%; height:100%; z-index:9; position:relative; }
+			h1 { font-size: 4em; }
+			h1 a { text-decoration:none; color:white; } 
+			/* h1 a { text-decoration:none; color:#7b79a3; } */
+			h2 { font-size: 3em; text-decoration:none; color:white; margin-top: -16px; }
+			h2 a { text-decoration:none; color:white; }
+			</style>
+    </head>
+    <body>
+		 <div id="logo">
+			 <a href="slides.html"><img src="img/new-namecoin-logo.png" width="200px" height="200px"></a>
+		 </div>
 
-<div class="presentation">
-
-<!-- 
-	<div class="slide">
-		<h1 align="center">Namecoin - The Next Generation DNS</h1>
-		<h2 align="center">The Coming Disruption</h2>
-		<div align="center" style="margin-top: 32px"><img src="img/new-namecoin-logo.png"></div>
-	</div>
--->	
-	
-	<div class="slide">
-		<h1>Why we care about Namecoin?</h1>
-		<div style="float:right;margin:40px 28px 0 0">
-			<img src="img/namecoin-kitty.png" />
+		 <div id="titles">
+			 <h1 align="center" style="margin-top:90px">
+				 <a href="slides.html">Namecoin - Next Generation DNS</a></h1>
+			 <h2 align="center"><a href="slides.html">The Coming Disruption</a></h2>
 		</div>
-		<ul>
-		<br><li>no registrars</li>
-		<br><li>no registries</li>
-		<br><li>no ICANN control</li>
-		<br><li>new &amp; different opportunities</li>
-		</ul>
-	</div>
-	
-	
-	<div class="slide">
-		<h1>What is DNS anyway?</h1>
-		<div style="float:right;margin:30px 24px 0 0">
-			<img src="img/dns.jpg" />
-		</div>
-		<ul>
-		<br><li>name resolution - Internet phone book</li>
-		<br><li>resolvers and rootservers</li>
-		<br><li>ICANN's role</li>
-		<br><li>Internet's weakest link</li>
-		</ul>
-	</div>
-	
-	
-	<div class="slide">
-		<h1>Zookos Triangle</h1>
-		<div style="float:right;margin:40px 24px 0 0">
-			<img src="img/zookos-triangle.png" width="360" />
-		</div>
-		<ul>
-			<li>Proposed in 2001: 
-			<br><small><a href="http://zookos.com/distnames.html">http://zookos.com/distnames.html</a></small></li>
-			<br><li>Memorable + Secure: DNS?</li>
-			<br><li>Memorable + Decentralized: nicknames</li>
-			<br><li>Decentralized + Secure: <br>PGP keys, Bitcoin addresses</li>
-			<br>
-			<p><br><small>more info: 
-			  <a href="https://en.wikipedia.org/wiki/Zooko%27s_triangle">https://en.wikipedia.org/wiki/Zooko%27s_triangle</a></small></p>
-		</ul>
-	</div>
-	
-	
-	<div class="slide">
-		<h1>So What's the Problem with DNS?</h1>
-		<div style="float:right; margin:36px 28px;">
-			<img src="img/google_announcement.png" />
-		</div>
-		<ul>
-		<br><li>repressive governments routinely attack DNS</li>
-		<br><li class="incremental">bad guys easily exploit gaping holes in DNS</li>
-		<br><li class="incremental">the weakest link in Internet infrastructure</li>
-		</ul>
-	</div>
-	
-	
-	<div class="slide">
-		<h1>ICANN Awareness</h1>
-		<br>
-		<div style="background-color:#ddd;padding: 12px 16px">
-			<cite style="font-style:italic">
-			The hacker inside me likes decentralization architecture. 
-			It could be argue that much of the "political problems" we have today derives from the centralized nature of the DNS with the root.
-			So technology like <u>namecoins</u> or other decentralized identifier system intricates me. - James Seng
-			</cite><br>
-		</div>
-		<br>
-		<ul> &nbsp; from March 2014 draft from ICANN's Technology Innovation Panel</ul>
-		<br>
-		<p align="center"><small>
-		<a href="https://www.icann.org/en/about/planning/strategic-engagement/identifier-technology/report-21feb14-en.pdf">https://www.icann.org/en/about/planning/strategic-engagement/identifier-technology/report-21feb14-en.pdf</a>
-		</small></p>
-	</div>
-	
-	
-	<div class="slide">
-		<h1>Centralization of DNS Creates Vulnerabilities</h1>
-		<div style="float:right; margin:28px 24px;">
-			<img src="img/internet-security.jpg" />
-		</div>
-		<ul>
-		<div style="float:right"></div>
-		<br><li>central attack vectors, e.g. rootservers</li>
-		<br><li>one private key to sign root certs, heavily guarded</li>
-		<br><li>registry operators become targets for attack</li>
-		</ul>
-	</div>
-	
+		<div id="clickhere" align="center"><a href="slides.html">(Click to Continue)</a></div>
+		<div id="clickme"> </div>
 
-	<div class="slide">
-		<h1>Decentralized DNS Provides Political Benefits</h1>
-		<div style="float:right; margin:36px 20px;">
-			<img src="img/internet-censorship.jpg" />
-		</div>
-		<ul>
-		<br><li>free from political corruption</li>
-		<br><li>censorship resistant</li>
-		<br><li>domains cannot be seized</li>
-		<br><li>more resilient when under attack</li>
-		</ul>
-	</div>
-	
-	
-	<div class="slide">
-		<h1>A Few Notes About Bitcoin</h1>
-		<div style="float:right; margin:54px 28px;">
-			<img src="img/digital-bitcoin.jpg" />
-		</div>
-		<ul>
-		<br><li>a currency, a payment system, a protocol</li>
-		<br><li>central theme: remove need for trusted 3rd parties</li>
-		<br><li>working example of blockchain technology</li>
-		</ul>
-	</div>
-	
-	
-	<div class="slide">
-		<h1>Blockchain Basics</h1>
-		<div style="float:right; margin:32px 18px;">
-			<img src="img/blockchain.png" />
-		</div>
-		<ul>
-		<br><li>distributed consensus - every node on the network agrees</li>
-		<br><li>immutable transaction records</li>
-		<br><li>arbitrary data can be inserted</li>
-		</ul>
-	</div>
-	
-	
-	<div class="slide">
-	<h1>Namecoin Basics</h1>
-	<div style="float:right; margin:16px 20px;">
-		<img src="img/namecoinlogo2.jpg" />
-	</div>
-	<ul>
-	<br><li>the original clone of bitcoin</li>
-	<br><li>instructions added to reserve and update names</li>
-	<br><li>not a financial system per se</li>
-	<br><li>start here: namecoin.info and dot-bit.org</li>
-	</ul>
-	</div>
-	
-	
-	<div class="slide">
-	<h1>Namecoin Blockchain is a Key/Value Store</h1>
-	<ul>
-	<li>use any namespace you want, but one is predefined (.BIT)</li>
-	<li>store up to 520 bytes per transaction currently</li>
-	<pre><small>
-{
-  "id" : "mikeward", 
-  "email" : "namecoin@mikeward.net", 
-  "gpg" : "F716D516", 
-  "bitcoin" : "1Miked2o3mU8QwmwZK5e424XGUEvBtUHRS", 
-  "dogecoin" : "D6JyuQKejdqDq9a6g1NgrmdWtZJCHZBtxc", 
-  "namecoin" : "ND2RyspSY6cz9dYyK8Ju2nPHcW4JBhso8i", 
-  "darkcoin" : "Xwa6AVf5EbQpLgvZEAHHFk28dQhaQkDvUd"
-}
-	</small></pre>
-	</ul>
-	</div>
-	
-	
-	<div class="slide">
-	<h1>.BIT and Beyond</h1>
-	<div style="float:right; margin:44px 20px;">
-		<img src="img/tor.png" />
-	</div>
-	<ul>
-	<br><li>.onion , .exit , .i2p , .gnu , .dns, .p2p, .mike</li>
-	<br><li>TOR team actively looking into best way to incorporate blockchain-based system into their browser to manage the domain names used by the network</li>
-	<br><li>you should be able to type "torwiki" into the browser and it finds the .onion domain, 
-	no need to bookmark non-memorable names like "http://zqktlwi4fecvo6ri.onion"</li>
-	</ul>
-	</div>
-	
-	
-	<div class="slide">
-	<h1>Namecoin Wallet</h1>
-	<div style="float:right; margin:34px 20px;">
-		<img src="img/wallet.png" width="640" />
-	</div>
-	<ul>
-		<br><li><em>wallet</em> is a misnomer</li>
-		<br><li>stores namecoins</li>
-		<br><li>manages domains</li>
-		<br><li>you are your own bank,
-		<br>your own registrar
-		<br><span class="incremental">so take precautions!</span>
-	</ul>
-	</div>
-	
-	
-	<div class="slide">
-	<h1>Registering .BIT Domain Names</h1>
-	<div style="float:right; margin:34px 20px;">
-		<img src="img/wallet.png" width="640" />
-	</div>
-	<ol>
-		<li>get some Namecoins</li>
-		<br><li>get Namecoin wallet or namecoind</li>
-		<br><li>start registering names</li>
-		<br><li>lean back and smile</li>
-	</ol>
-	</div>
-	
-	
-	<div class="slide">
-	<h1>Let's Register a .BIT Domain</h1>
-	<ul>
-	<div align="center">
-		<img src="img/livedemo.png" style="margin-top:60px" />
-	</div>
-	</ul>
-	</div>
-	
-	
-	<div class="slide">
-	<h1>Namecoin Blockchain Explorer</h1>
-	<div align="center" style="margin-top:24px;">
-		<img src="img/namecoin_tx.png" width="615"/>
-	</div>
-	<br>
-	</div>
-	
-	
-	<div class="slide">
-	<h1>Platform-specific Notes: Windows</h1>
-	<ul>
-	<div align="center"><img src="img/nmc_easy_windows.png" width="768" /></div>
-	</ul>
-	</div>
-	
-	
-	<div class="slide">
-	<h1>Platform-specific Notes: Mac OSX</h1>
-	<ul>
-	<div style="float:right; margin: 46px 20px 0 16px">
-		<img src="img/nmc-osx.jpg" />
-	</div>
-	<br><li>I'm not aware of any browser extensions</li>
-	<br><li>Namecoin-QT and namecoind are notoriously difficult to compile on OSX</li>
-	<br><p><small>(find someone who compiled it, use those <i>exact</i> versions of dependencies, 
-			  hard code all paths in makefile, light incense, put a small pile of salt on your doorstep,
-			 chant in some ancient language and hope for the best)</small></p>
-	</ul>
-	</div>
-	
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
 
-	<div class="slide">
-	<h1>Resolving .BIT Domains - All Platforms</h1>
-	<div style="float:right; margin:26px 20px;">
-		<img src="img/dotbitlogo.png" />
-	</div>
-	<ul>
-	<li>browser plugins - freespeechme, meowbit</li>
-	<li>.bit.pe</li>
-	<li>use proxy like proxy.dot-bit.org</li>
-	<li>namecoind, nmcontrol</li>
-	<li>point to .BIT resolver via hostfile</li>
-	<li>various projects incl dnschain, BitToBind</li>
-	</ul>
-	</div>
-	
-
-	<div class="slide">
-	<h1>Resolving .BIT Domains - Windows</h1>
-	<div align="center"><img src="img/MeowBit.png" width="768"/></div>
-	</div>
-
-	
-	<div class="slide">
-	<h1>Resolving .BIT Domains - Linux</h1>
-	<div align="center">
-		<img src="img/freespeechme-website.png" width="820"/>
-	</div>
-	</div>
-
-	
-	<div class="slide">
-	<h1>Resolving .BIT Domains - Linux</h1>
-	<div align="center">
-		<img src="img/freespeechme-extension-screen.png" width="820"/>
-	</div>
-	</div>
-
-	
-	<div class="slide">
-	<h1>Questions?</h1>
-	<div align="center" style="margin-top:100px">
-		<img src="img/questions.png" />
-	</div>
-	</div>
-
-	
-	<div class="slide">
-	<h1>The id Namespace</h1>
-	<ul>
-	<li>decentralized identity systems avoid privacy issues (FB login anyone?)</li>
-	<br>
-	<div style="background-color:#ddd;padding: 12px 16px">
-		<cite style="font-style:italic">
-		"I think the architecture with these blockchains is going to get replicated for lots of different applications. 
-		It won't be Bitcoin. <u>It'll be Namecoin for identity</u>, it'll be Mastercoin for exchanges. 
-		There's all these new blockchains that are coming up that support different use cases. 
-		I think this architecture is really, really important." - Fred Wilson, veteran tech investor
-		</cite>
-	</div>
-	</ul>
-	</div>
-	
-	
-	<div class="slide">
-	<h1>Identity Management and Trust Online</h1>
-	<div style="float:right; margin:26px 20px;">
-		<img src="img/identity-management.jpg" />
-	</div>
-	<ul>
-	<li>oauth (status quo) is a problem</li>
-	<br><li>public key infrastructure (PKI) suffers from centralization</li>
-	<br><li>take charge of your identity info!<br>http://dns.dnschain.net/id/mikeward</li>
-	<br><li>Yesterday at TechCrunch Disrupt veteran tech investor Fred Wilson teased that he was investing in the identity management space, and he has stated before that he believes Namecoin is the leader in this space.</li>
-	</ul>
-	</div>
-	
-	
-	<div class="slide">
-	<h1>Examples - bit.co.in</h1>
-	<div align="center" style="margin-top:20px;">
-		<img src="img/bit.co.in.png" width="768" />
-	</div>
-	</div>
-	
-	
-	<div class="slide">
-	<h1>Examples - one-name</h1>
-	<div align="center" style="margin-top:20px;">
-		<img src="img/one-name.png" width="768" />
-	</div>
-	</div>
-	
-	
-	<div class="slide">
-	<h1>Opportunities?</h1>
-	<ul>
-	<div align="center" style="margin-top:200px">WHERE ARE THE OPPORTUNITIES?</div>
-	</ul>
-	</div>
-
-
-	<div class="slide">
-	<h1>resources</h1>
-	<ul>
-	<li>these slides: http://namecoin.mikeward.net/</li>
-	<li>hangouts video will be posted soon</li>
-	<li>great sites: <a href="http://namecoin.info">namecoin.info</a> &amp; <a href="http://dot-bit.org">dot-bit.org</a></li>
-	<div style="float:left; margin: 32px 20px 0 20px">
-	<table border="0" style="margin-top:24px;"><tr>
-	<td align="center" width="34%">
-		<div>BTC</div>
-		<img src="img/btc_1Miked2.png">
-		<span style="font-size:0.5em">1Miked2o3mU8QwmwZK5e424XGUEvBtUHRS</span>
-		<small><a href="http://bit.co.in/mikeward">http://bit.co.in/mikeward</a></small>
-	</td>
-	<td align="center" width="33%">
-		<div>Namecoin</div>
-		<img src="img/nmc_preso.png">
-		<span style="font-size:0.5em">NDczee7FJPKqJ1jNfqgEqigcAxsKGe2CQr</span>
-		<br>&nbsp;<br>
-	</td>
-	<td align="center">
-		<div>Doge</div>
-		<img src="img/doge_webtips.png">
-		<nobr><small><a href="http://bit.co.in/mike.doge">http://bit.co.in/mike.doge</a></small></nobr>
-		<br>&nbsp;<br>
-	</td>
-	</tr></table>
-	</div>
-	</ul>
-	</div>
-	
-	
-	<div class="slide">
-	<h1>Open Discussion!</h1>
-	<ul>
-	<p align="center"><img src="img/namecoin-logo.png"/></p>
-	</ul>
-	</div>
-
-</div>
-
-</body>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$("div#clickme").click(function(){
+					location.href="slides.html";
+				});
+			});
+			</script>
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
 </html>
